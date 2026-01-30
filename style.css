@@ -88,3 +88,23 @@ button {
   margin: 20px auto;
 }
 
+.gallery {
+  display: flex;          /* obrázky vedle sebe */
+  flex-wrap: wrap;        /* pokud se nevejdou, zalomí se do dalšího řádku */
+  justify-content: center; /* centrování */
+  gap: 10px;              /* mezera mezi obrázky */
+  margin: 20px;
+}
+
+.gallery img {
+  width: 200px;           /* velikost obrázku */
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;        /* ukazatel ruky */
+  transition: transform 0.3s; /* efekt při hover */
+}
+
+.gallery img:hover {
+  transform: scale(1.1);  /* obrázek se mírně zvětší při najetí myší */
+}
+
