@@ -100,11 +100,11 @@ button {
   width: 200px;           /* velikost obrázku */
   height: auto;
   border-radius: 10px;
-  cursor: pointer;        /* ukazatel ruky */
+  cursor: pointer;        
   transition: transform 0.3s; /* efekt při hover */
 }
 
 .gallery img:hover {
-  transform: scale(1.1);  /* obrázek se mírně zvětší při najetí myší */
+  transform: scale(1.05);  /* mírné zvětšení při hover */
 }
 
