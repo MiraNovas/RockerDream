@@ -97,15 +97,13 @@ button {
 }
 
 .gallery img {
-  width: 200px;           /* velikost obrázku */
-  height: 200px;
-  border-radius: 10px;
-  cursor: pointer;        
-  transition: transform 0.3s; /* efekt při hover */
+  width: 200px;
+  height: auto;
 }
 
 .gallery img:hover {
   transform: scale(1.05);  /* mírné zvětšení při hover */
 }
+
 
 
