@@ -98,11 +98,15 @@ button {
 
 .gallery img {
   width: 200px;
-  height: auto;
+  height: 200px;          /* pevná výška */
+  object-fit: cover;      /* obrázek se ořízne a vyplní celý čtverec */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);  /* mírné zvětšení při hover */
+  transform: scale(1.05);
 }
 
 
