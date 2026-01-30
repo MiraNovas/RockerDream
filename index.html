@@ -1,55 +1,102 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UFT-8">
-	<title>Rocker dream</title>
-	<link rel="stylesheet" href="style.css">
-</head>
+.btn-link {
+ display: inline-block;
+ padding: 10px 20px;
+ background-color: orange;
+ color: white;
+ text-decoration: none;
+ border-radius: 5px;
+ font-weight: bold;
+ cursor: pointer;
+ margin-top: 20px;
+}
+
+.btn-link:hover {
+ background-color: darkorange;
+}
 
 
-<body>
-
-	<div class="bg"></div>
-
-
-<h1> Dobrý den</h1>
-<p> Jsem webová stránka o hudebních skupinách.</p>
-<p> Toto je zkušební web kde budou náhodné fotky tlačítka text a pod</p>
-
-
-<div class="left-bar">
-  <p>Hlavní stránka</p>
-  <p>Fotky</p>
-</div>
-
-<div class="center-square">
-  <h2>Knocking on Heaven's Door</h2>	
- <pre>
-   Mama, take this badge off of me
-I can't use it anymore
-It's gettin' dark, too dark to see
-I feel I'm knockin' on heaven's door
-
-Knock, knock, knockin' on heaven's door
-Knock, knock, knockin' on heaven's door
-Knock, knock, knockin' on heaven's door
-Knock, knock, knockin' on heaven's door
-
-Mama, put my guns in the ground
-I can't shoot them anymore
-That long black cloud is comin' down
-I feel I'm knockin' on heaven's door
-
-Knock, knock, knockin' on heaven's door
-Knock, knock, knockin' on heaven's door
-Knock, knock, knockin' on heaven's door
-Knock, knock, knockin' on heaven's door 
-</div>
-
- <button>Klikni na mě</button>
+/* rozmazané pozadí celé stránky */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('mojestrankabg.jpg'); /* obrázek */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1; /* za vším obsahem */
+}
 
 
- 
+/* text a obsah stránky */
+body {
+  margin: 0;
+  font-family: "New Roman", serif;
+  color: white;
+  text-align: center;
+}
 
-</body>
-</html>
+/* levý pruh */
+.left-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 100vh;
+  background-color: rgba(255, 165, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px; /* odsazení od horního okraje */
+  z-index: 1; /* nad pozadím */
+}
+
+.left-bar p {
+  margin: 20px 0;  /* mezera mezi položkami */
+  font-weight: bold;
+  color: white;
+}
+
+.center-square {
+  width: 300px;
+  height: auto;
+  background-color: rgba(255, 165, 0, 0.6);
+  color: white;
+  
+  display: flex;
+  flex-direction: column;  /* důležité: prvky pod sebe, ne vedle sebe */
+  align-items: center;     /* vodorovné centrování */
+  justify-content: flex-start;
+  
+  margin: 250px auto 20px auto; /* mezery nahoře a dole */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.center-square h2 {
+  margin: 0 0 10px 0;
+  text-align: center;      /* název nahoře uprostřed */
+}
+
+.center-square pre {
+  margin: 0;
+  text-align: center;      /* text písničky pod názvem */
+  white-space: pre-wrap;   /* zachová zalomení řádků */
+}
+/* ostatní styl */
+h1 { color: orange; }
+
+p { color: white; }
+
+button { 
+  padding: 10px 20px;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
